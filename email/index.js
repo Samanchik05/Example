@@ -14,7 +14,8 @@ function sendMail() {
       document.getElementById("number").value = "";
       document.getElementById("message").value = "";
       console.log(res);
-      alert("Xabaringiz muvaffaqiyatli yuborildi!!")
+      alert("Xabaringiz muvaffaqiyatli yuborildi!. Tez orada javob qaytaramiz!.")
+
 
     })
     .catch(err => console.log(err));
