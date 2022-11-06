@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Intizom</title>
+    <link rel="stylesheet" href="./Example/example.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./example.css" />
+    <script
+      src="https://kit.fontawesome.com/2bbac3a66c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src=""></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("iioEGWzgJJrVtGYDt");
+      })();
+    </script>
+
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+  </head>
+  <body>
+    <div style="border-radius: 10px">
+      <div class="row">
+        <form id="create-account-form">
+          <div class="title">
+            <h2>Kirish uchun ro'yxatdan o'ting va 1-bepul darsni oling!</h2>
+          </div>
+          <!-- USERNAME -->
+          <h5 for="name">Ism Familyangiz</h5>
+          <div class="input-group">
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Ism Familya"
+            />
+          </div>
+          <!-- NUMBER -->
+          <h5 for="number">Telefon Raqamingiz</h5>
+          <div class="input-group">
+            <input
+              required
+              type="number"
+              class="form-control"
+              id="number"
+              placeholder="998 00 000 00 00"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary send"
+            onclick="sendMail()"
+          >
+            Yuborish
+          </button>
+          <button class="btn btn-dark sent" style="display: none">
+            <a target="_blank" href="../secondPage.html" style="color: white" ;
+              >1-Bepul darsni olish uchun bosing
+            </a>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./email/index.js"></script>
+
+    <script>
+      function sendMail() {
+        var params = {
+          name: document.getElementById("name").value,
+          number: document.getElementById("number").value,
+        };
+
+        const serviceID = "service_r6qe5ue";
+        const templateID = "template_xujtc8j";
+
+        emailjs
+          .send(serviceID, templateID, params)
+          .then((res) => {
+            document.getElementById("name").value = "";
+            document.getElementById("number").value = "";
+            console.log(res);
+            alert("Xabaringiz muvaffaqiyatli yuborildi!!");
+          })
+          .catch((err) => console.log(err));
+      }
+
+      let btnSend = document.querySelector(".send");
+      let message = document.querySelector(".sent");
+      btnSend.addEventListener("click", () => {
+        btnSend.innerHTML = "Yuborilmoqda...";
+        setTimeout(() => {
+          btnSend.style.display = "none";
+          message.style.display = "";
+          message.innerHTML.document.querySelector(".sent");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

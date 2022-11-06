@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Super Intizom</title>
+    <link rel="stylesheet" href="./Example/example.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -12,7 +13,12 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="./Example/example.css" />
+    <script
+      src="https://kit.fontawesome.com/2bbac3a66c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src=""></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -26,17 +32,16 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
   </head>
-  <body style="background-color: #282C34;">
-    <div class="container mt-3">
+  <body>
+    <div style="border-radius: 10px">
       <div class="row">
-        <div
-          class="col-md-x6 border-left py-3 form-color"
-          style="margin-top: 150px"
-        >
-          <h3>Kirish uchun ro'yxatdan o'ting va 1-bepul darsni oling!</h3>
-          <br />
-          <div class="form-group">
-            <h5 for="name">Ism Familyangiz</h5>
+        <form id="create-account-form">
+          <div class="title">
+            <h2>Kirish uchun ro'yxatdan o'ting va 1-bepul darsni oling!</h2>
+          </div>
+          <!-- USERNAME -->
+          <h5 for="name">Ism Familyangiz</h5>
+          <div class="input-group">
             <input
               required
               type="text"
@@ -45,8 +50,9 @@
               placeholder="Ism Familya"
             />
           </div>
-          <div class="form-group">
-            <h5 for="number">Telefoningiz</h5>
+          <!-- NUMBER -->
+          <h5 for="number">Telefon Raqamingiz</h5>
+          <div class="input-group">
             <input
               required
               type="number"
@@ -55,6 +61,7 @@
               placeholder="998 00 000 00 00"
             />
           </div>
+
           <button
             type="submit"
             class="btn btn-primary send"
@@ -63,11 +70,11 @@
             Yuborish
           </button>
           <button class="btn btn-dark sent" style="display: none">
-            <a href="./secondPage.html" style="color: white" ;
+            <a target="_blank" href="./secondPage.html" style="color: white" ;
               >1-Bepul darsni olish uchun bosing
             </a>
           </button>
-        </div>
+        </form>
       </div>
     </div>
     <script src="./email/index.js"></script>
@@ -80,7 +87,7 @@
         };
 
         const serviceID = "service_r6qe5ue";
-        const templateID = "template_xujtc8j";  
+        const templateID = "template_xujtc8j";
 
         emailjs
           .send(serviceID, templateID, params)
@@ -106,38 +113,3 @@
     </script>
   </body>
 </html>
-
-<!-- <a href="./twoPage.html">Bepul darsni olish</a> -->
-
-
-   <!-- Kirish Super Intizom
-   Odat qanday shakillantirish.
-   Miya yaxshi ishlash uchun ozuqalar
-   Diqqatni kuchliroq qilish.
-   Pamidor usuli.
-   Xotirani ishlash prinsipi.
-   Asosiy assotsiatsiyalar.
-   Qarmoqlar usuli.
-   Poa tizimi va Major tizimi.
-   Loki usuli.
-   Xorijiy so`zlarni yodlash usuli.
-   Kitobni 90% ma`lumotlarni eslab qolish.
-   Super Notiq.
-   Yuz va Ismlar.
-   Intelektual chidamlilik.
-   Kartalar eslab qolish.
-   Metronom.
-   Binar raqamlar.
-   Tarixiy yil va sanalarni eslab qolish.
-   She`r yodlash.
-   Test javoblarini eslab qolish.
-   Kimyoviy davriy jadval elementlarni nomini, tartib tartib raqam massasini eslab qolish.
-   Bialogiya va Fizikadan Terminlarni qoidalarni tezroq eslab qolish.
-   Dangasalikni kelib chiqish sabablari.
-   Kunni rejalashtirish.
-   Maqsadni to`g`ri qo`yish va maqsadga erishish usuli.
-   Yashil va qizil topshiriqlar.
-   Komfort zo`nadan chiqish.
-   Miyani defolt tizimi
-   Haqiqiy daholik.
-   Daholik omillari. -->

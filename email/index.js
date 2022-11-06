@@ -22,17 +22,17 @@ function sendMail() {
 
 }
 
-let ptime = document.querySelector('.time');
-let pday = document.querySelector('.day');
-let pdorn = document.querySelector('.dorn');
-setInterval(() => {
-  let days = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
-  let time = new Date();
-  let hour = - time.getHours();
-  let minutes = time.getMinutes();
-  let seconds = time.getSeconds();
-  let date = time.getDate();
-  let day = days[time.getDay()];
-  pday.textContent = day;
-  ptime.textContent = Math.abs(hour) + ":" + minutes + ":" + seconds;
-}, 1000);
+// let ptime = document.querySelector('.time');
+// let pday = document.querySelector('.day');
+// let pdorn = document.querySelector('.dorn');
+// setInterval(() => {
+//   let days = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+//   let time = new Date();
+//   let hour = - time.getHours();
+//   let minutes = time.getMinutes();
+//   let seconds = time.getSeconds();
+//   let date = time.getDate();
+//   let day = days[time.getDay()];
+//   pday.textContent = day;
+//   ptime.textContent = Math.abs(hour) + ":" + minutes + ":" + seconds;
+// }, 1000);
